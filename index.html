@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+
+nav {background-image: url("img/header.jpg")}
+</style>
+</head>
+<body>
+
+<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;"><br>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Cafe Menu</b></h3>
+  </div>
+  <div class="w3-bar-block">
+   
+    <a href="#Latte" onclick="openMenu(event,
+    'Latte')" class="w3-bar-item w3-button w3-hover-white tablink">Latte</a> 
+
+    <a href="#V60" onclick="openMenu(event,
+    'V60')" class="w3-bar-item w3-button w3-hover-white tablink">V60</a> 
+
+   
+    <a href="#Black" onclick="openMenu(event,
+    'Black')" class="w3-bar-item w3-button w3-hover-white tablink">Black</a> 
+
+   
+    <a href="#Toast" onclick="openMenu(event,
+    'Toast')" class="w3-bar-item w3-button w3-hover-white tablink">Toast</a> 
+  
+  </div>
+</nav>
+
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <div class="w3-container" style="margin-top:80px">
+    <h1 class="w3-jumbo"><b>Cafe Menu</b></h1>
+    <hr style="width:50px;border:5px solid black" class="w3-round">
+  </div>
+  
+  <div class="w3-row-padding">
+    <div class="w3-half">
+        <div id="Latte" class="w3-container menu w3-center w3-animate-fading" style="display:none">
+            <h3>Latte</h3>
+            <img src="img/latte.jpg" style="width:100%">
+          </div>
+
+          <div id="V60" class="w3-container menu w3-center w3-animate-bottom" style="display:none">
+            <h3>V60</h3>
+            <img src="img/v60.jpg" style="width:100%">
+          </div>
+
+          <div id="Black" class="w3-container menu w3-center w3-animate-top" style="display:none">
+            <h3>Black Coffee</h3>
+            <img src="img/black-coffee.jpg" style="width:100%">
+          </div>
+
+          <div id="Toast" class="w3-container w3-center menu w3-animate-zoom" style="display:none">
+            <h3>Toast</h3>
+            <img src="img/toast.jpg" style="width:100%">
+          </div>
+          
+          
+      </div>
+    </div>
+</div>
+
+<script>
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+ x = document.getElementsByClassName("menu");
+ for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none";
+ }
+ tablinks = document.getElementsByClassName("tablink");
+ for (i = 0; i < x.length; i++) {
+ tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
+ }
+ document.getElementById(menuName).style.display = "block";
+ evt.currentTarget.className += " w3-green";
+}
+
+
+</script>
+
+</body>
+</html>
